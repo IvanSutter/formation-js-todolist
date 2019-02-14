@@ -15,31 +15,6 @@
    15  vue create arquedi-vue
    16  cd arquedi-vue/
    17  npm run serve
-   18  ng
-   19  ng --help
-   20  ng help
-   21  ng generate component layout/Header -d
-   22  ng generate module layout -d
-   23  ng generate module layout
-   24  ng generate component layout/Header -d
-   25  ng generate component layout/Header
-   26  history
-   27  history >> history.txt
-   28  history > history.txt
-   29  ng generate component layout/Body
-   30  ng generate component layout/Footer
-   31  cat ~/.bash_history
-   32  cat ~/.bash_history
-   33  history > history.txt
-   34  ng g c routes/home -d
-   35  ls
-   36  cd src/
-   37  ls
-   38  cd ..
-   39  ng g c routes/home -d
-   40  ng g c routes/home -m routes/app-routing -d
-   41  ng g c routes/home -m routes/app-routing
-   42  history > history.txt
-   43  ng g c routes/contact -m routes/app-routing -d
-   44  ng g c routes/contact -m routes/app-routing 
-   45  history > history.txt
+   18  git remote add origin https://github.com/IvanSutter/formation-js-todolist.git
+   19  git push -u origin master
+   20  history > history.txt 
