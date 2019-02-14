@@ -1,0 +1,35 @@
+// http: //hslpicker.com/
+// https://www.cssmatic.com/box-shadow
+.jumbo {
+    text-align: center;
+    .tagline {
+        font-weight: bold;
+        font-size: 3rem;
+        padding: 2rem;
+    }
+    button.primary {
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 0.3rem 1.75rem;
+        background-color: hsla(225, 100%, 70%, 1);
+        -webkit-box-shadow: 0px 0px 20px 2px rgba(64, 64, 64, 1);
+        -moz-box-shadow: 0px 0px 20px 2px rgba(64, 64, 64, 1);
+        box-shadow: 0px 0px 20px 2px rgba(64, 64, 64, 1);
+        border-radius: 25px 25px 25px 25px;
+        -moz-border-radius: 25px 25px 25px 25px;
+        -webkit-border-radius: 25px 25px 25px 25px;
+        border: 0px solid #000000;
+        &:hover {
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(64, 64, 64, 1);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(64, 64, 64, 1);
+            box-shadow: 0px 0px 10px 0px rgba(64, 64, 64, 1);
+            border: 0px solid #000000;
+        }
+        &:active {
+            -webkit-box-shadow: 0px 0px 30px 5px rgba(64, 64, 64, 1);
+            -moz-box-shadow: 0px 0px 30px 5px rgba(64, 64, 64, 1);
+            box-shadow: 0px 0px 30px 5px rgba(64, 64, 64, 1);
+            border: 0px solid #000000;
+        }
+    }
+}

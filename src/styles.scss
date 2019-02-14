@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 0;
+    outline: none; // Pour ne pas faire apparaitre les bordures
 }
 
 p {
@@ -12,4 +13,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    //font-family: 'Felipa', cursive;
 }
