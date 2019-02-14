@@ -3,6 +3,7 @@
     display: flex;
     flex-flow: column nowrap;
     .row {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         .col {
@@ -19,15 +20,23 @@
             }
         }
         &.header {
+            cursor: default;
             font-weight: bold;
             background-color: cornflowerblue;
             .col {
                 text-align: center;
             }
         }
+        &.selected {
+            background: lightblue;
+        }
     }
 }
 
 form {
     padding: 2rem 0;
+}
+
+.remove {
+    padding: 1rem 0;
 }
