@@ -1,0 +1,28 @@
+    1  npm install express
+    2  touch .gitignore
+    3  ls
+    4  node server.js 
+    5  node server.js 
+    6  node server.js 
+    7  node server.js 
+    8  npm i serve-index
+    9  node server.js 
+   10  npm install -g @angular/cli
+   11  ls
+   12  cd ..
+   13  ng new todolist
+   14  npm install -g @vue/cli
+   15  vue create arquedi-vue
+   16  cd arquedi-vue/
+   17  npm run serve
+   18  ng
+   19  ng --help
+   20  ng help
+   21  ng generate component layout/Header -d
+   22  ng generate module layout -d
+   23  ng generate module layout
+   24  ng generate component layout/Header -d
+   25  ng generate component layout/Header
+   26  history
+   27  history >> history.txt
+   28  history > history.txt
