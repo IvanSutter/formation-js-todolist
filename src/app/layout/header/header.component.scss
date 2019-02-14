@@ -1,12 +1,20 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: lightblue;
     height: 4rem;
+    .margin-auto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 80rem;
+    }
     .logo {
         display: flex;
         align-items: center;
+        cursor: pointer;
         img {
             width: 2rem;
             padding: 0.5rem;
