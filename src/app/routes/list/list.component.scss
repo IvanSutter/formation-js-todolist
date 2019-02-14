@@ -1,0 +1,29 @@
+.table {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        .col {
+            border: 1px solid black;
+            flex-grow: 1;
+            flex-shrink: 0;
+            &.col-1 {
+                flex-basis: 80%;
+                text-align: left;
+            }
+            &.col-2 {
+                flex-basis: 20%;
+                text-align: center;
+            }
+        }
+        &.header {
+            font-weight: bold;
+            background-color: cornflowerblue;
+            .col {
+                text-align: center;
+            }
+        }
+    }
+}
