@@ -26,3 +26,17 @@
    26  history
    27  history >> history.txt
    28  history > history.txt
+   29  ng generate component layout/Body
+   30  ng generate component layout/Footer
+   31  cat ~/.bash_history
+   32  cat ~/.bash_history
+   33  history > history.txt
+   34  ng g c routes/home -d
+   35  ls
+   36  cd src/
+   37  ls
+   38  cd ..
+   39  ng g c routes/home -d
+   40  ng g c routes/home -m routes/app-routing -d
+   41  ng g c routes/home -m routes/app-routing
+   42  history > history.txt
