@@ -38,8 +38,12 @@ export class ListComponent implements OnInit {
   }
 
   onSubmit() {
-    this.todolist.push(this.f.value);
-    this.f.reset();
+    this.todolist.push({ ...this.f.value });
+    this.reset();
+  }
+
+  reset() {
+    this.f.reset({ text: '', isUrgent: false });
   }
 
   isSelected(r: TodoRecord) {
@@ -52,5 +56,18 @@ export class ListComponent implements OnInit {
       return;
     }
     this.selectedRecords.add(r);
+  }
+
+  hasSelectedRecords() {
+    return this.selectedRecords.size > 0;
+  }
+
+  removeSelection() {
+    console.log("test removeSelection");
+    this.selectedRecords.forEach(r => {
+      const index = this.todolist.findIndex(x => x === r);
+      this.todolist.splice(index, 1);
+    });
+    this.selectedRecords.clear();
   }
 }
