@@ -40,3 +40,6 @@
    40  ng g c routes/home -m routes/app-routing -d
    41  ng g c routes/home -m routes/app-routing
    42  history > history.txt
+   43  ng g c routes/contact -m routes/app-routing -d
+   44  ng g c routes/contact -m routes/app-routing 
+   45  history > history.txt
