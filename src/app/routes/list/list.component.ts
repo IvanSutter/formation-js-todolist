@@ -36,7 +36,7 @@ export class ListComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("test");
     this.todolist.push(this.f.value);
+    this.f.reset();
   }
 }
