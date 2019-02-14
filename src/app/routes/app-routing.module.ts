@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { componentFactoryName } from '@angular/compiler';
 import { ContactComponent } from './contact/contact.component';
 import { ListComponent } from './list/list.component';
 import { LegalComponent } from './legal/legal.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), CommonModule],
+  imports: [RouterModule.forRoot(routes), CommonModule, ReactiveFormsModule],
   exports: [RouterModule],
   declarations: [HomeComponent, ContactComponent, ListComponent, LegalComponent, NotFoundComponent]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 interface TodoRecord {
   text: string;
@@ -13,6 +14,11 @@ interface TodoRecord {
 export class ListComponent implements OnInit {
 
   todolist: TodoRecord[];
+
+  f = new FormGroup({
+    text: new FormControl('', [Validators.required]),
+    isUrgent: new FormControl(false)
+  });
 
   constructor() { }
 
@@ -29,4 +35,8 @@ export class ListComponent implements OnInit {
     ];
   }
 
+  onSubmit() {
+    console.log("test");
+    this.todolist.push(this.f.value);
+  }
 }

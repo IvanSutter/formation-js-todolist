@@ -1,3 +1,16 @@
+<form [formGroup]="f" (ngSubmit)="onSubmit()">
+  <div>
+    <textarea cols="30" rows="4" formControlName="text"></textarea>
+  </div>
+  <div>
+    <label><input type="checkbox" formControlName="isUrgent">Tâche urgente ?</label>
+  </div>
+  <div>
+    <button type="reset">Reset</button>
+    <button [disabled]="f.invalid">Submit</button>
+  </div>
+</form>
+
 <div class="table">
   <div class="row header">
     <div class="col col-1">Texte</div>
