@@ -43,6 +43,7 @@ export class ListComponent implements OnInit {
   }
 
   reset() {
+    console.log("reset");
     this.f.reset({ text: '', isUrgent: false });
   }
 
