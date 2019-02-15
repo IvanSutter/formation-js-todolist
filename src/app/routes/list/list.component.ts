@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TodoRecord } from 'src/app/todorecord.interface';
+import { TodoListService } from 'src/app/todo-list.service';
 
-interface TodoRecord {
-  text: string;
-  isUrgent: boolean;
-}
+
 
 @Component({
   selector: 'app-list',
@@ -13,19 +12,17 @@ interface TodoRecord {
 })
 export class ListComponent implements OnInit {
 
-  todolist: TodoRecord[];
-
   selectedRecords: Set<TodoRecord> = new Set<TodoRecord>();
 
   f = new FormGroup({
     text: new FormControl('', [Validators.required]),
-    isUrgent: new FormControl(false)
+    isUrgent: new FormControl(false, [])
   });
 
-  constructor() { }
+  constructor(public todolist: TodoListService) { }
 
   ngOnInit() {
-    this.todolist = [
+    this.todolist.set([
       {
         text: 'Faire la vaisselle',
         isUrgent: false
@@ -34,7 +31,7 @@ export class ListComponent implements OnInit {
         text: 'Déboucher les WC',
         isUrgent: true
       }
-    ];
+    ]);
   }
 
   onSubmit() {
@@ -43,8 +40,8 @@ export class ListComponent implements OnInit {
   }
 
   reset() {
-    console.log("reset");
-    this.f.reset({ text: '', isUrgent: false });
+    console.log('reset');
+    this.f.reset({text: 'azer' + Math.floor(Math.random() * 100), isUrgent: false});
   }
 
   isSelected(r: TodoRecord) {
@@ -52,7 +49,7 @@ export class ListComponent implements OnInit {
   }
 
   toggleSelection(r: TodoRecord) {
-    if (this.isSelected(r)) {
+    if (this.selectedRecords.has(r)) {
       this.selectedRecords.delete(r);
       return;
     }
@@ -64,11 +61,11 @@ export class ListComponent implements OnInit {
   }
 
   removeSelection() {
-    console.log("test removeSelection");
+    console.log('test removeSelection');
     this.selectedRecords.forEach(r => {
-      const index = this.todolist.findIndex(x => x === r);
-      this.todolist.splice(index, 1);
+      this.todolist.remove(r);
     });
     this.selectedRecords.clear();
   }
+
 }
